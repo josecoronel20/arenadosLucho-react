@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-const apiKey = 're_VoArj5TF_JnfnBrg1UXjGNpR7vRQzUc55';
+const apiKey = 're_Kmi5B411_9V1vrhuDKoVqmPDC2sPHAcRb';
 const resend = new Resend(apiKey);
 
 const sendEmail = async (formData) => {
