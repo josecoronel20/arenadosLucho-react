@@ -11,7 +11,7 @@ const Home = () => {
       <div className="bg-secondaryDark absolute h-screen w-full top-0 left-0 z-10 opacity-40"></div>
       <img
         className="absolute h-screen w-screen z-0 top-0 object-cover"
-        src="/img/hero.png"
+        src="../../public/img/hero.png"
         alt="Hero image description"
       />
 
