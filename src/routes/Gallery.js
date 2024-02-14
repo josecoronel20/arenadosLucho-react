@@ -47,7 +47,7 @@ const Gallery = () => {
 
   // Función para obtener la lista de metadatos de archivos al cargar el componente
   useEffect(() => {
-    const storageRef = ref(storage, "");
+    const storageRef = ref(storage, "galeria");
 
     // Obtiene la lista de metadatos de archivos en la carpeta
     listAll(storageRef)

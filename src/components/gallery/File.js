@@ -82,14 +82,14 @@ const File = ({ children }) => {
             key={firstFile.key}
           />
         ) : (
-          <div className=" bg-bgOpacidad fixed z-30 top-0 left-0 h-screen w-full p-5 flex justify-center items-center">
+          <div className=" bg-bgOpacidad fixed z-30 top-0 left-0 h-screen w-full p-1 md:p-5 flex justify-center items-center">
             <div
               onClick={handleIsClicked}
               className="absolute top-10 right-10 z-40 cursor-pointer "
             >
               {close}
             </div>
-            <div className=" flex gap-5  justify-center items-center">
+            <div className=" flex gap-1 md:gap-5  justify-center items-center">
               <div className="cursor-pointer" onClick={handleArrowLeft}>
                 {arrowLeft}
               </div>

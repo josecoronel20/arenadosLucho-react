@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "../components/home/Accordion";
 import { Icon } from "@iconify/react";
+import videoSB from "../img/arenando.mp4"
 
 const Sandblast = () => {
   return (
@@ -26,7 +27,7 @@ const Sandblast = () => {
           <div className="w-1/2">
             <video
               className="rounded-xl "
-              src="./img/arenando.mp4"
+              src={videoSB}
               loop
               muted
               autoPlay

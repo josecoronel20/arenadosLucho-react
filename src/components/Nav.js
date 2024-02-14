@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import logoNav from "../img/only-logo.png"
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -37,7 +38,7 @@ const Nav = () => {
             "
           >
             <Link to="/">
-              <img src="/img/only-logo.png" alt="logo" />
+              <img src={logoNav} alt="logo" />
             </Link>
           </div>
         ) : null}

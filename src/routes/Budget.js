@@ -1,31 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../components/Button';
-import sendEmail from '../emailService'; 
+import { useForm, ValidationError } from '@formspree/react';
+import swal from 'sweetalert';
 
-const Budget = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    work: '',
-    quantity: '',
-    size: '',
-    location: '',
-    message: '',
-  });
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xrgnqbod");
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-
-    await sendEmail(formData);
-
-    // Puedes añadir lógica adicional después de enviar el correo, como mostrar un mensaje de éxito o redirigir a otra página
+    
+    try {
+      await handleSubmit(e);
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    }
   };
+
+  if (state.succeeded) {
+    window.location.reload();
+
+    swal({
+      icon: "success",
+      title: "Tu presupuesto se envió con éxito!"
+    });
+  }
+
 
   return (
     <main
@@ -44,7 +43,7 @@ const Budget = () => {
           <label className="text-primary font-semibold" htmlFor="name">
             Nombre:
           </label>
-          <input className="w-full rounded-sm bg-primary" type="text" name="name" id="name" required />
+          <input className="w-full rounded-sm bg-primary" type="text" name="nombre" id="name" required />
         </div>
         <div>
           <label className="text-primary font-semibold" htmlFor="email">
@@ -56,20 +55,20 @@ const Budget = () => {
           <label className="text-primary font-semibold" htmlFor="phone">
             Teléfono:
           </label>
-          <input className="w-full rounded-sm bg-primary" type="tel" name="phone" id="phone" required />
+          <input className="w-full rounded-sm bg-primary" type="tel" name="telefono" id="phone" required />
         </div>
         <div>
           <div>
             <label className="text-primary font-semibold" htmlFor="work">
               ¿Qué quieres arenar?:
             </label>
-            <input className="w-full rounded-sm bg-primary" type="text" name="work" id="work" required />
+            <input className="w-full rounded-sm bg-primary" type="text" name="trabajo" id="work" required />
           </div>
           <div>
             <label className="text-primary font-semibold" htmlFor="quantity">
               Cantidad:
             </label>
-            <input className="w-full rounded-sm bg-primary" type="text" name="quantity" id="quantity"  />
+            <input className="w-full rounded-sm bg-primary" type="text" name="cantidad" id="quantity"  />
           </div>
           <div>
             <label className="text-primary font-semibold" htmlFor="size">
@@ -77,7 +76,7 @@ const Budget = () => {
             </label>
             <input className="w-full rounded-sm bg-primary"
               type="text"
-              name="size"
+              name="tamaño"
               id="size"
               placeholder=" si no se sabe, colocar las medidas aproximadas"
               
@@ -88,18 +87,23 @@ const Budget = () => {
           <label className="text-primary font-semibold" htmlFor="location">
             Ubicación:
           </label>
-          <input className="w-full rounded-sm bg-primary" type="text" name="location" id="location" required />
+          <input className="w-full rounded-sm bg-primary" type="text" name="ubicación" id="location" required />
         </div>
         <div>
           <label className="text-primary font-semibold" htmlFor="message">
-            Mensaje:
+            Comentario:
           </label>
-          <textarea className="w-full rounded-sm bg-primary" name="message" id="message" ></textarea>
+          <textarea className="w-full rounded-sm bg-primary" name="comentario" id="message" ></textarea>
         </div>
-        <button type="submit"><Button>Enviar</Button></button>
+        <button type="submit" disabled={state.submitting}><Button>Enviar</Button></button>
       </form>
     </main>
   );
 };
+function App() {
+  return (
+    <ContactForm />
+  );
+}
 
-export default Budget;
+export default App;

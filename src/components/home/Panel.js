@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
+
 const Panel = ({ title, img, children, reverse }) => {
   const [isOpen, setIsOpen] = useState(false);
 

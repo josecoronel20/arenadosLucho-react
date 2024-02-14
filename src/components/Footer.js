@@ -80,11 +80,11 @@ const Footer = () => {
         </ul>
       </nav>
     </div>
-    <iframe
+    {(<iframe
       className="rounded-xl w-full max-w-lg"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.8480096469516!2d-58.80703930817907!3d-34.43865708592819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9ec0037e0915%3A0xda7074c4746e4e42!2sAbella%20Caprile%201246%2C%20B1669AWE%20Del%20Viso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1700689469246!5m2!1ses-419!2sar"
       title="Our location on Google Maps"
-    ></iframe>
+    ></iframe>)}
   </footer> : null
     
   );
