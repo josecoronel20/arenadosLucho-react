@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/arenadosLucho-react/static/css/main.6fa85d4b.css",
-    "main.js": "/arenadosLucho-react/static/js/main.3f9a9f3d.js",
+    "main.css": "/arenadosLucho-react/static/css/main.ad4421b1.css",
+    "main.js": "/arenadosLucho-react/static/js/main.19561e3d.js",
     "static/js/787.d2ab9c38.chunk.js": "/arenadosLucho-react/static/js/787.d2ab9c38.chunk.js",
+    "static/media/arenando.mp4": "/arenadosLucho-react/static/media/arenando.6271a5c24011ecb2fee6.mp4",
+    "static/media/hero.jpg": "/arenadosLucho-react/static/media/hero.16ab6911ab1f0d447b8a.jpg",
+    "static/media/image 5.png": "/arenadosLucho-react/static/media/image 5.52150dfc73f866e90641.png",
+    "static/media/image 4.png": "/arenadosLucho-react/static/media/image 4.b0c0aae549de84dff11b.png",
+    "static/media/image 3.png": "/arenadosLucho-react/static/media/image 3.5eeee7a8d7f940c0a8c3.png",
+    "static/media/image 2.png": "/arenadosLucho-react/static/media/image 2.815820f4e5f24a1341ff.png",
+    "static/media/image 1.png": "/arenadosLucho-react/static/media/image 1.9c995927dbff2d3c4d13.png",
     "index.html": "/arenadosLucho-react/index.html",
-    "main.6fa85d4b.css.map": "/arenadosLucho-react/static/css/main.6fa85d4b.css.map",
-    "main.3f9a9f3d.js.map": "/arenadosLucho-react/static/js/main.3f9a9f3d.js.map",
+    "main.ad4421b1.css.map": "/arenadosLucho-react/static/css/main.ad4421b1.css.map",
+    "main.19561e3d.js.map": "/arenadosLucho-react/static/js/main.19561e3d.js.map",
     "787.d2ab9c38.chunk.js.map": "/arenadosLucho-react/static/js/787.d2ab9c38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fa85d4b.css",
-    "static/js/main.3f9a9f3d.js"
+    "static/css/main.ad4421b1.css",
+    "static/js/main.19561e3d.js"
   ]
 }
